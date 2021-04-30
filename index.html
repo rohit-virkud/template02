@@ -2,11 +2,12 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Swiper custom slides transform effect</title>
+  <title>Swiper custom slides </title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <style>
       *{
             margin: 0;
@@ -471,6 +472,22 @@ var swiperOptions = {
 };
 
 var swiper = new Swiper(".swiper-container", swiperOptions);
+/*image zoom in animations*/
+
+
+
+    var test = setInterval(function(){ 
+        if(swiper.activeIndex == 2)
+            {
+                $(".image").addClass("zoomOut");      
+            }
+            else 
+            {
+                $(".image").removeClass("zoomOut");      
+            }  
+              
+        },1000); 
+    
 
 </script>
 </body>
