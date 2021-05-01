@@ -310,6 +310,80 @@ a{
             
         }
 
+        .grid
+        {
+            margin-top: min(8vw,4vh);
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: min(3.623vw,1.6vh);
+            grid-row-gap: min(3.623vw,1.6vh);
+        }
+
+        .image01
+        {
+            background: url('Image1.png')no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: min(30.1vw,16vh);
+        }
+        .image02
+        {
+            background: url('Image2.png')no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: min(30.1vw,16vh);
+
+        }
+        .image03
+        {
+            background: url('Image3.png')no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: min(30.1vw,16vh);
+
+        }
+        .image04
+        {
+            background: url('Image4.png')no-repeat;
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: min(30.1vw,16vh);
+
+        }
+        .container-03
+        {
+            width: 82%;
+            height: 100%;
+        }
+        .social-icons
+        {
+            margin-top: min(5vw,2.5vh);
+        }
+        .social-icons a img
+        {
+            width: min(7vw,5vh);
+            height:  min(7vw,5vh);
+        }
+        .heading-name-03
+        {
+            margin-top: min(10vw,6vh);
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: bold;
+            font-size: min(7.264vw,3.5vh);
+            line-height: min(8.475vw,4.2vh);
+            color: #FFFFFF;
+        }
+        .mg-lt
+        {
+            margin-left: min(2vw,1vh);
+        }
+
 
   </style>
 
@@ -386,7 +460,7 @@ a{
     </div>
     
     <div class="swiper-slide">
-      <div class="slide-inner" style=" background: linear-gradient(184.93deg, #3A6574 1.88%, #24424E 96.03%);;">
+      <div class="slide-inner" style=" background: linear-gradient(184.93deg, #3A6574 1.88%, #24424E 96.03%);">
         <div class="slide-02">
             <img src="./slide2pattern.png" alt="slide-02" class="slide02pattern" /> 
             <img src="./slide2patternSmall.png" alt="slide-02" class="slide02patternSmall" /> 
@@ -419,7 +493,65 @@ a{
       </div> <!--end of inner two --->
     </div>
     <div class="swiper-slide">
-      <div class="slide-inner"></div>
+      <div class="slide-inner">
+      
+        <div class="slide-03" style=" background: #1D3138">
+            <img src="./slide-01.png" alt="slide-03" class="slideOnePattern" />
+            <div class="container-03">
+                <h1 class="heading-name" style="margin-top: min(16vw,8vh);">Gallery</h1>
+                <div class="grid">
+                    <div class="image01"></div>
+                    <div class="image02"></div>
+                    <div class="image03"></div>
+                    <div class="image04"></div>
+                </div>
+
+                <h1 class="heading-name-03">Follow Us</h1>
+                <div class="social-icons">
+                    <a href="#!">
+                        <img src="fb.png" alt="fb" />
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="insta.png" alt="insta" />
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="youtube.png" alt="youtube" />
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="telegram.png" alt="telegram" />
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="twitter.png" alt="twitter" />
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="tiktok.png" alt="tiktok" />
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="linkedin.png" alt="linkedin" />
+                    </a>
+                </div>
+                <h1 class="heading-name-03">Our Reviews</h1>
+                <div class="social-icons">
+                    <a href="#!">
+                        <img src="Tripadvisor.png" alt="fb" />
+                    </a>
+
+                    <a href="#!" class="mg-lt">
+                        <img src="bookingcom.png" alt="insta" />
+                    </a>
+
+                </div>
+            </div> 
+        </div>
+
+
+      </div>
     </div>
     <div class="swiper-slide">
       <div class="slide-inner">
@@ -476,6 +608,8 @@ var swiperOptions = {
 };
 
 var swiper = new Swiper(".swiper-container", swiperOptions);
+
+
 /*image zoom in animations*/
 
 
