@@ -241,7 +241,7 @@ a{
             background-position: center;
             width: 100%;
             height: min(50.121vw,30vh);
-            transform: scale(1.5);
+            transform: scale(1.8);
             transition:  transform 5s ease-in-out;
             
         }
@@ -389,6 +389,98 @@ a{
         {
             margin-left: min(2vw,1vh);
         }
+
+        /**/
+       .slide-04
+       {
+          
+           width: 100%;
+           height: 100%;
+           background: linear-gradient(11.48deg, #305563 6.32%, #213841 112.84%);
+       }
+       .input
+       {
+        padding-top: min(3.39vw,1.8vh);
+        padding-bottom: min(3.39vw,1.8vh);
+        padding-left: min(3.668vw,1.8vh);
+        padding-right: min(3.668vw,1.8vh);
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: min(3.405vw,1.8vh);
+        line-height: min(5.085vw,3vh);
+       
+        border-radius: min(0.852vw,0.4vh);
+       }
+
+       .form
+       {
+           display: flex;
+           flex-direction: column;
+           width: 85%;
+       }
+
+       /* extra icons */
+		.extra-icons
+		{
+			margin-top: min(7.299vw,3.6vh);
+			padding-bottom: 2.433vw;
+			width: 100%;
+			background: #0C232C;
+			display: flex;
+			justify-content: center;
+			
+		}
+		.extra-container
+		{
+			width: 87%;
+			font-weight: 700;
+		}
+		.round-icons-wrapper
+		{
+			width: 100%;
+			padding: 10px 0px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            margin-top: min(4vw,2vh);
+		}
+		.round-icons-container
+		{
+			display: flex;
+            flex-wrap: wrap;
+			width: 78vw;
+			
+		}
+		.round
+		{
+			max-width: 87vw;
+			flex: 1 0 35vw; /* The important bit. This percentage decides your columns. 
+			The percent can be px. It just represents your minimum starting width.
+			flex grow | flex shrink | flex basis*/
+			margin: 5px;
+			height: 30vw;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			overflow: hidden;
+			
+		}
+		.round img
+		{
+			object-fit: contain;
+			max-width: 100%;
+			max-height: 30vw;
+		}
+
+		
+
+   
+    
+
+      
+
 
 
   </style>
@@ -567,9 +659,60 @@ a{
       </div>
     </div>
     <div class="swiper-slide">
-      <div class="slide-inner">
-  
-      </div>
+      <div class="slide-inner slide-04">
+        
+       
+        <h1 class="heading-name" style="margin-top: min(16vw,8vh);margin-left:min(8vw,4vh)">Gallery</h1>
+        <form method="post" class="form" style="margin-top: min(6vw,3vh);margin-left:min(8vw,4vh)">
+            <input type="name" name="name" placeholder="Enter Your Name"  class="input"/>
+            <input type="email" name="email" placeholder="Enter Your Email" class="input" style=" margin-top: min(4vw,2vh);"/>
+            <div class="button-wrapper">
+            <input type="submit" name="submit" value="submit" class="primary-btn" style="margin-top: min(4vw,2vh);width: 30%;" />
+            </div>
+        </form>
+
+        <div class="extra-icons">
+			<div class="extra-container">
+				<h1 class="heading-name" style="margin-bottom: 0;">
+                Our Partners</h1> 
+			
+			<div class="round-icons-wrapper">
+				<div class="round-icons-container">
+					
+					<a class="round">
+						<img src="logo-extra.png" class="extra-icon">
+					</a>
+					<a class="round">
+						<img src="logo-extra.png" class="extra-icon">
+					</a>
+				
+				
+					<a class="round">
+						<img src="logo-extra.png" class="extra-icon">
+					</a>
+					
+					<a class="round">
+						<img src="logo-extra.png" class="extra-icon">
+					</a>
+				</div>
+			</div>
+	 
+	        </div>   
+
+        </div>  <!-- info container close -->
+	
+
+        <a href="#!" class="secondSlideArrow">
+            <img src="./left-arrow.png" alt="left-arrow" class="prev left-arrow" />
+        </a> 
+
+        
+
+
+
+
+
+      </div> <!-- end -->
     </div>
 
   </div>
@@ -637,7 +780,7 @@ var swiper = new Swiper(".swiper-container", swiperOptions);
                 $(".image").removeClass("zoomOut");      
             }  
               
-        },1000); 
+        },500); 
     
 
 </script>
