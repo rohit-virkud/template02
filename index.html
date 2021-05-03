@@ -167,7 +167,9 @@ a{
             color: #1D3138;;
             background-color: #FFDFA1;
             border-radius: min(0.852vw,0.4vh);
+         
             /*box-shadow: 0px 2px 4px 50px rgba(255, 223, 161, 0.1);*/
+            display: inline-block;
             
 
            
@@ -394,6 +396,12 @@ a{
         {
             margin-left: min(2vw,1vh);
         }
+        .swiper-slide-prev
+        {
+            filter:  black brightness(0%);
+            filter: grayscale(50%) opacity(0.98);
+            transition: 0.5s all;
+        }
 
         /**/
        .slide-04
@@ -459,15 +467,16 @@ a{
             flex-shrink: 0;
             flex-wrap: wrap;
 			width: 78vw;
+            justify-content: center;
 			
 		}
 		.round
 		{
-			max-width: 87vw;
+			max-width: 30vw;
 			flex: 1 0 35vw; /* The important bit. This percentage decides your columns. 
 			The percent can be px. It just represents your minimum starting width.
 			flex grow | flex shrink | flex basis*/
-			margin: 5px;
+			margin: 10px;
 			height: 30vw;
 			overflow: hidden;
 			display: flex;
@@ -475,13 +484,14 @@ a{
 			align-items: center;
 			justify-content: center;
 			overflow: hidden;
-			
+            background-color: #C4C4C4;
+			border-radius: 50%;
 		}
 		.round img
 		{
 			object-fit: contain;
-			max-width: 100%;
-			max-height: 30vw;
+			max-width: 50%;
+			max-height: 20vw;
 		}
 
 
@@ -713,8 +723,10 @@ a{
                     <p class="contact-txt">www.artcoolcards.gr</p>
                 </a>
 
+
+
                  
-                <a  href="#!"  class="primary-btn pulse" data-swiper-parallax="-250">
+                <a  href="#!"  class="primary-btn pulse" data-swiper-parallax="-280">
                     Save My Contacts
                 </a> 
 
@@ -857,19 +869,19 @@ a{
 				<div class="round-icons-container" data-swiper-parallax="-200">
 					
 					<a class="round">
-						<img src="logo-extra.png" alt="lg-extra"  class="extra-icon" />
+						<img src="logo.png" alt="lg-extra"  class="extra-icon"/>
 					</a>
 					<a class="round">
-						<img src="logo-extra.png" alt="lg-extra" class="extra-icon" />
+						<img src="logo.png" alt="lg-extra" class="extra-icon" />
 					</a>
 				
 				
 					<a class="round">
-						<img src="logo-extra.png" alt="lg-extra" class="extra-icon" />
+						<img src="logo.png" alt="lg-extra" class="extra-icon" />
 					</a>
 					
 					<a class="round">
-						<img src="logo-extra.png" alt="lg-extra" class="extra-icon" />
+						<img src="logo.png" alt="lg-extra" class="extra-icon" />
 					</a>
 				</div>
 			</div>
@@ -890,11 +902,6 @@ a{
             <img src="./left-arrow.png" alt="left-arrow" class="prev left-arrow" />
         </a> 
 
-        
-
-
-
-
 
       </div> <!-- end -->
     </div>
@@ -909,6 +916,7 @@ a{
     var interleaveOffset = 0.5;
 
 var swiperOptions = {
+  
   speed: 1000,
   grabCursor: true,
   watchSlidesProgress: true,
@@ -935,7 +943,8 @@ var swiperOptions = {
             }
             $(slide).css({
                 boxShadow: '0px 0px 10px rgba(0,0,0,' + boxShadowOpacity + ')',
-                transform: 'translate3d(' + translate + 'px,0,0)' 
+                transform: 'translate3d(' + translate + 'px,0,0)'
+                
             })
         }
 
@@ -953,6 +962,8 @@ var swiperOptions = {
       var swiper = this;
       for (var i = 0; i < swiper.slides.length; i++) {
         swiper.slides[i].style.transition = "";
+        
+
       }
     },
     setTransition: function(speed) {
