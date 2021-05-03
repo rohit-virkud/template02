@@ -494,16 +494,15 @@ a{
             transform: translateX(-100%); 
             transition:  transform 1s ease-out;
         }
-        .open{
-            transform: translateX(0%);
-        }
+        
         .share-slide .close-icon
         {
             position: absolute;
             top:4%;
             right: 7%;
             width: min(5vw,3vh);
-            height: min(5vw,3vh);
+            height: min(5vw,3vh); 
+           
             
         }
         .share-slide-share-icons
@@ -525,6 +524,8 @@ a{
             font-size: min(5vw,2.5vh);
             color: #1D4B7A;
             margin-bottom:  min(4vw,3vh);
+            transform: translateX(-80%);
+            transition:  transform 1s ease-out;
 
             
         }
@@ -534,6 +535,8 @@ a{
             color: #1D4B7A;
             margin-bottom:  min(4vw,4vh);
             margin-top: 30%;
+            transform: translateX(-80%);
+            transition:  transform 1s ease-out;
         }
 
 
@@ -546,6 +549,8 @@ a{
             grid-gap: min(2vw,1vh);
             
             justify-content: center;
+            transform: translateX(-40%);
+            transition:  transform 1s ease-out;
             
         }
         .icon-grid a
@@ -572,10 +577,26 @@ a{
             color: #1D4B7A;
             align-items: center;
         }
+        .qr-code-container
+        {
+            transform: translateX(-80%);
+            transition:  transform 1s ease-out;
+        }
         .qr-code-container img
         { 
             width: min(30vw,20vh);
             height: min(30vw,20vh);
+           
+           
+        }
+
+        .open{
+            transform: translateX(0%);
+        }
+        .closeAnim
+        {
+            transition:  transform 0.5s ease-out;
+            transform: rotateZ(180deg);
            
         }
 
@@ -591,15 +612,15 @@ a{
             <div class="icon-grid">
                 <a href="#!" ><img src="sms.png" alt="sms-img" /></a>
                 <a href="#!"><img src="cs.png" alt="cs-img"/></a>
-                <a href="#!"><img src="whatsapp.png" alt="whatsapp-img"/></a>
-                <a href="#!"><img src="dropbox 187.png" alt="dropbox-img"/></a>
-                <a href="#!"><img src="fb9.png" alt="fb-img"/></a>
-                <a href="#!"><img src="telegram 191.png" alt="tel-img"/></a>
-                <a href="#!"><img src="twitter8.png" alt="twit-img"/></a>
-                <a href="#!"><img src="linkedin3.png" alt="linkedin-img"/></a>
+                <a href="#!"><img src="whatsapp.png" alt="whatsapp-img" /></a>
+                <a href="#!"><img src="dropbox 187.png" alt="dropbox-img" /></a>
+                <a href="#!"><img src="fb9.png" alt="fb-img" /></a>
+                <a href="#!"><img src="telegram 191.png" alt="tel-img"  /></a>
+                <a href="#!"><img src="twitter8.png" alt="twit-img"  /></a>
+                <a href="#!"><img src="linkedin3.png" alt="linkedin-img"  /></a>
             </div>
-            <h2 class="scan-and-save-txt" >SCAN AND SAVE</h2>
-            <div class="qr-code-container">
+            <h2 class="scan-and-save-txt">SCAN AND SAVE</h2>
+            <div class="qr-code-container" >
                 <img src="qr.png" alt="qr-img"/>
             </div>
         </div>
@@ -653,7 +674,7 @@ a{
                 </a>
 
                  
-                <a  href="#!" data-swiper-parallax="-250" class="primary-btn" >
+                <a  href="#!"  class="primary-btn" data-swiper-parallax="-250">
                     Save My Contacts
                 </a> 
 
@@ -906,7 +927,7 @@ var swiper = new Swiper(".swiper-container", swiperOptions);
 /*image zoom in animations*/
 
 var test = setInterval(function(){ 
-    if(swiper.activeIndex == 2)
+    if(swiper.activeIndex == 1)
         {
             $(".image").addClass("zoomOut");      
         }
@@ -920,10 +941,20 @@ var test = setInterval(function(){
 
     function openSlide() {
     $(".share-slide").addClass("open")
+    $(".icon-grid").addClass("open").delay(500);
+    $(".share-headline").addClass("open").delay(500);
+    $(".scan-and-save-txt").addClass("open").delay(500);
+    $(".qr-code-container").addClass("open").delay(500);
+    $(".close-icon").removeClass("closeAnim");
     }
 
     function closeSlide() {
     $(".share-slide").removeClass("open")
+    $(".icon-grid").removeClass("open").delay(500);
+    $(".share-headline").removeClass("open").delay(500);
+    $(".scan-and-save-txt").removeClass("open").delay(500);
+    $(".qr-code-container").removeClass("open").delay(500);
+    $(".close-icon").addClass("closeAnim").delay(1000);
     }
 
     
