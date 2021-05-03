@@ -441,7 +441,7 @@ a{
 		.extra-icons
 		{
 			margin-top: min(7.299vw,3.6vh);
-			padding-bottom: 2.433vw;
+			padding-bottom: min(2.433vw,2vh);
 			width: 100%;
 			background: #0C232C;
 			display: flex;
@@ -469,18 +469,18 @@ a{
 			display: flex;
             flex-shrink: 0;
             flex-wrap: wrap;
-			width: 90vw;
+			width: min(90vw,45vh);
             justify-content: center;
 			
 		}
 		.round
 		{
-			max-width: 30vw;
+			max-width: min(30vw,15vh);
 			flex: 1 0 35vw; /* The important bit. This percentage decides your columns. 
 			The percent can be px. It just represents your minimum starting width.
 			flex grow | flex shrink | flex basis*/
-			margin: 3vw;
-			height: 30vw;
+			margin: min(3vw,2vh);
+			height: min(30vw,15vh);
 			overflow: hidden;
 			display: flex;
             flex-shrink: 0;
@@ -629,15 +629,16 @@ a{
         /* footer */
 		.footer
 		{
+           
 			width: 100%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			bottom: 0;
+	
 			padding-top: min(2vw,1.5vh);
 			padding-bottom: min(2vw,1.5vh);
 			background-color: transparent;
-            margin-top: min(4vw,2vh);
+            
 		}
 		.footer-img-container
 		{
