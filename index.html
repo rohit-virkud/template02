@@ -167,7 +167,12 @@ a{
             color: #1D3138;;
             background-color: #FFDFA1;
             border-radius: min(0.852vw,0.4vh);
+            /*box-shadow: 0px 2px 4px 50px rgba(255, 223, 161, 0.1);*/
+            
+
+           
         }
+       
         .share-btn
         {
             position: absolute;
@@ -570,7 +575,6 @@ a{
         {
             width: 100%;
             height: 50vh;
-            
             display: flex;
             flex-direction: column;
             flex-shrink: 0;
@@ -599,6 +603,42 @@ a{
             transform: rotateZ(180deg);
            
         }
+        /*.pulse
+        {
+            animation: pulse 1s linear infinite;
+            
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0  #ffe0a142; }
+            }*/
+
+        /* footer */
+		.footer
+		{
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			bottom: 0;
+			padding-top: min(2vw,1.5vh);
+			padding-bottom: min(2vw,1.5vh);
+			background-color: transparent;
+		}
+		.footer-img-container
+		{
+            width: min(15vw,7.5vh);
+			height: min(15vw,7.5vh);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.footer .footer-img-container img{
+			max-height: 100%;
+			max-width: 100%;
+			object-fit: contain;
+		}
+    
 
 
   </style>
@@ -674,7 +714,7 @@ a{
                 </a>
 
                  
-                <a  href="#!"  class="primary-btn" data-swiper-parallax="-250">
+                <a  href="#!"  class="primary-btn pulse" data-swiper-parallax="-250">
                     Save My Contacts
                 </a> 
 
@@ -707,7 +747,7 @@ a{
                    <div class="image"></div>
                </div>
 
-               <h1 class="heading-name02" data-swiper-parallax="-250">About Us</h1>
+               <h1 class="heading-name02" data-swiper-parallax="-350">About Us</h1>
 
               <div class="vertical-slider">
                     <p class="heading02-p" data-swiper-parallax="-250">
@@ -799,10 +839,8 @@ a{
     </div>
     <div class="swiper-slide">
       <div class="slide-inner slide-04">
-        
-       
-        <h1 class="heading-name" style="margin-top: min(16vw,8vh);margin-left:min(8vw,4vh)" data-swiper-parallax="-300">Gallery</h1>
-        <form method="post" class="form" style="margin-top: min(6vw,3vh);margin-left:min(8vw,4vh)" data-swiper-parallax="-300">
+        <h1 class="heading-name" style="margin-top: min(16vw,8vh);margin-left:min(8vw,4vh)" data-swiper-parallax="-300">Subscribe</h1>
+        <form method="post" class="form" style="margin-top: min(4vw,3vh);margin-left:min(8vw,4vh)" data-swiper-parallax="-300">
             <input type="name" name="name" placeholder="Enter Your Name"  class="input"/>
             <input type="email" name="email" placeholder="Enter Your Email" class="input" style=" margin-top: min(4vw,2vh);"/>
             <div class="button-wrapper">
@@ -839,6 +877,13 @@ a{
 	        </div>   
 
         </div>  <!-- info container close -->
+
+
+        <div class="footer">
+            <a class="footer-img-container">
+              <img src="logo.png">
+            </a>
+        </div>
 	
 
         <a href="#!" class="secondSlideArrow" data-swiper-parallax="-250">
