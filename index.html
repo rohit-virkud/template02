@@ -15,6 +15,10 @@
             box-sizing: border-box;
             font-family: 'Roboto', sans-serif;
         }
+        body{
+            background-color: #1D3138;
+        }
+        
         
         .swiper-container {
         position: absolute;
@@ -928,10 +932,9 @@ a{
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
 <script>
-    var interleaveOffset = 0.5;
+var interleaveOffset = 0.5;
 
 var swiperOptions = {
-  
   speed: 1000,
   grabCursor: true,
   watchSlidesProgress: true,
@@ -954,32 +957,18 @@ var swiperOptions = {
             }
             else {
                 translate = 0;
-                boxShadowOpacity = 1  - Math.min(Math.abs(progress),1);
-               
+               // boxShadowOpacity = 1  - Math.min(Math.abs(progress),1);     
             }
             $(slide).css({
                 boxShadow: '0px 0px 10px rgba(0,0,0,' + boxShadowOpacity + ')',
                 transform: 'translate3d(' + translate + 'px,0,0)'
-                
             })
         }
-
-     /* var swiper = this;
-      for (var i = 0; i < swiper.slides.length; i++) {
-
-        var slideProgress = swiper.slides[i].progress;
-        var innerOffset = swiper.width * interleaveOffset;
-        var innerTranslate = slideProgress * innerOffset;
-        swiper.slides[i].querySelector(".slide-inner").style.transform =
-          "translate3d(" + innerTranslate + "px, 0, 0)"; 
-      }      */
     },
     touchStart: function() {
       var swiper = this;
       for (var i = 0; i < swiper.slides.length; i++) {
         swiper.slides[i].style.transition = "";
-        
-
       }
     },
     setTransition: function(speed) {
@@ -1011,15 +1000,12 @@ setInterval(function(){
         if ($(".swiper-slide").hasClass("swiper-slide-prev")) 
         {
 
-          
-                $(".overlaywrap").addClass('overlay');
+            $(".overlaywrap").addClass('overlay');
                         
         }else{
             $(".overlaywrap").removeClass('overlay');
         } 
-    
-   
-              
+        
     },500);
 
 
