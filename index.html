@@ -396,11 +396,10 @@ a{
         {
             margin-left: min(2vw,1vh);
         }
-        .swiper-slide-prev
+        
+        .swiper-slide
         {
-            filter:  black brightness(0%);
-            filter: grayscale(50%) opacity(0.98);
-            transition: 0.5s all;
+            transition: 0.5s ease-in;
         }
 
         /**/
@@ -469,7 +468,7 @@ a{
 			display: flex;
             flex-shrink: 0;
             flex-wrap: wrap;
-			width: min(60vw,35vh);
+			width: min(90vw,45vh);
             justify-content: center;
 			
 		}
@@ -478,7 +477,10 @@ a{
 		
             max-width: min(25vw,15vh);
             flex: 1 0 35vw;
-            margin: min(4vw,1vh);
+            margin-top: min(4vw,1vh);
+            margin-bottom: min(4vw,1vh);
+            margin-left: min(5vw,2.5vh);
+              margin-right: min(5vw,2.5vh);
             height: min(25vw,15vh);
             /* overflow: hidden; */
             display: flex;
@@ -653,6 +655,12 @@ a{
 			max-width: 100%;
 			object-fit: contain;
 		}
+       .swiper-slide-prev
+       {
+       
+         filter: brightness(0) invert(0.1);
+         
+       }
     
 
 
@@ -683,8 +691,9 @@ a{
 <!-- partial:index.partial.html -->
 <div class="swiper-container">
   <div class="swiper-wrapper">
-
+   
     <div class="swiper-slide">
+        <!-- <div class="overlay"></div> -->
       <div class="slide-inner" style="background-color: #1D3138;">
 
         <img src="./slide-01.png" alt="slide-01-pattern" class="slideOnePattern" />
@@ -754,6 +763,7 @@ a{
     </div>
     
     <div class="swiper-slide">
+        
       <div class="slide-inner" style=" background: linear-gradient(184.93deg, #3A6574 1.88%, #24424E 96.03%);">
         <div class="slide-02">
             <img src="./slide2pattern.png" alt="slide-02" class="slide02pattern" /> 
@@ -945,6 +955,7 @@ var swiperOptions = {
             else {
                 translate = 0;
                 boxShadowOpacity = 1  - Math.min(Math.abs(progress),1);
+               
             }
             $(slide).css({
                 boxShadow: '0px 0px 10px rgba(0,0,0,' + boxShadowOpacity + ')',
@@ -987,7 +998,7 @@ var swiper = new Swiper(".swiper-container", swiperOptions);
 
 /*image zoom in animations*/
 
-var test = setInterval(function(){ 
+setInterval(function(){ 
     if(swiper.activeIndex == 1)
         {
             $(".image").addClass("zoomOut");      
@@ -996,6 +1007,18 @@ var test = setInterval(function(){
         {
             $(".image").removeClass("zoomOut");      
         }  
+
+        if ($(".swiper-slide").hasClass("swiper-slide-prev")) 
+        {
+
+          
+                $(".overlaywrap").addClass('overlay');
+                        
+        }else{
+            $(".overlaywrap").removeClass('overlay');
+        } 
+    
+   
               
     },500);
 
@@ -1018,6 +1041,10 @@ var test = setInterval(function(){
     $(".close-icon").addClass("closeAnim").delay(1000);
     }
 
+    
+       
+   
+    
     
     
 
