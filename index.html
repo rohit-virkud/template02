@@ -632,39 +632,20 @@ a{
             0% { box-shadow: 0 0 0 0  #ffe0a142; }
             }*/
 
-        /* footer */
-		.footer
-		{
-           
-			width: 100%;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-	
-			padding-top: min(2vw,1.5vh);
-			padding-bottom: min(2vw,1.5vh);
-			background-color: transparent;
-            
-		}
-		.footer-img-container
-		{
-            width: min(15vw,7.5vh);
-			height: min(15vw,7.5vh);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.footer .footer-img-container img{
-			max-height: 100%;
-			max-width: 100%;
-			object-fit: contain;
-		}
+       
        .swiper-slide-prev
        {
        
          filter: brightness(0.5) invert(0.005);
          
        }
+	  
+     .swiper-container,.swiper-slide
+{
+  overflow-y: scroll;
+  overflow-x: hidden;
+   
+}
     
 
 
@@ -697,6 +678,9 @@ a{
   <div class="swiper-wrapper">
    
     <div class="swiper-slide">
+	 <audio id="audio">
+            <source src="intro.mpeg" type="audio/mpeg">
+          </audio>
         <!-- <div class="overlay"></div> -->
       <div class="slide-inner" style="background-color: #1D3138;">
 
@@ -766,7 +750,7 @@ a{
       
     </div>
     
-    <div class="swiper-slide">
+    <div class="swiper-slide" style=" background: linear-gradient(184.93deg, #3A6574 1.88%, #24424E 96.03%);">
         
       <div class="slide-inner" style=" background: linear-gradient(184.93deg, #3A6574 1.88%, #24424E 96.03%);">
         <div class="slide-02">
@@ -910,12 +894,7 @@ a{
         </div>  <!-- info container close -->
 
 
-        <div class="footer">
-            <a class="footer-img-container">
-              <img src="logo.png">
-            </a>
-        </div>
-	
+        
 
         <a href="#!" class="secondSlideArrow" data-swiper-parallax="-250">
             <img src="./left-arrow.png" alt="left-arrow" class="prev left-arrow" />
@@ -1027,6 +1006,23 @@ setInterval(function(){
     $(".close-icon").addClass("closeAnim").delay(1000);
     }
 
+	
+   function play2() { 
+        
+        var audioElement = document.getElementById("audio");
+            
+            if (audioElement.paused) {
+                    /* Audio link for notification */ 
+                audioElement.play(); 
+                
+            }
+            else {
+                
+                audioElement.pause(); 
+                
+            }
+
+    } 
     
        
    
