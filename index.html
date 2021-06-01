@@ -790,14 +790,18 @@ a{
         <div class="slide-03" style=" background: #1D3138">
             <img src="./slide-01.png" alt="slide-03" class="slideOnePattern" />
             <div class="container-03">
-                <h1 class="heading-name" style="margin-top: min(16vw,8vh);" data-swiper-parallax="-300">Gallery</h1>
+              <div class="holder" style="width: 100%;height: 80%;display: flex;flex-direction: column;justify-content: center;">
+                <div class="01">
+                <h1 class="heading-name"  data-swiper-parallax="-300">Gallery</h1>
                 <div class="grid" data-swiper-parallax="-350">
                     <div class="image01"></div>
                     <div class="image02"></div>
                     <div class="image03"></div>
                     <div class="image04"></div>
                 </div>
+                </div>
 
+                <div class="02">
                 <h1 class="heading-name-03" data-swiper-parallax="-250">Follow Us</h1>
                 <div class="social-icons" data-swiper-parallax="-250">
                     <a href="#!">
@@ -828,6 +832,8 @@ a{
                         <img src="linkedin.png" alt="linkedin" />
                     </a>
                 </div>
+             </div>
+            <div class="03">
                 <h1 class="heading-name-03" data-swiper-parallax="-250">Our Reviews</h1>
                 <div class="social-icons" data-swiper-parallax="-250">
                     <a href="#!">
@@ -839,6 +845,11 @@ a{
                     </a>
 
                 </div>
+            </div>
+
+               </div>
+                
+
                 <a href="#!" class="firstSlideArrow" data-swiper-parallax="-250">
                     <img src="./right-arrow.png" alt="left-arrow" class="next left-arrow" />
                 </a>
@@ -850,10 +861,13 @@ a{
         </div>
 
 
+
       </div>
     </div>
     <div class="swiper-slide">
       <div class="slide-inner slide-04">
+
+       <div class="x" style="width: 100%;height: 100%;display: flex;flex-direction: column;justify-content: center;flex-grow: 0"> 
         <h1 class="heading-name" style="margin-top: min(16vw,8vh);margin-left:min(8vw,4vh)" data-swiper-parallax="-300">Subscribe</h1>
         <form method="post" class="form" style="margin-top: min(4vw,3vh);margin-left:min(8vw,4vh)" data-swiper-parallax="-300">
             <input type="name" name="name" placeholder="Enter Your Name"  class="input"/>
@@ -862,6 +876,7 @@ a{
             <input type="submit" name="submit" value="SUBMIT" class="primary-btn" style="margin-top: min(4vw,2vh);width: 30%;" />
             </div>
         </form>
+       </div>
 
         <div class="extra-icons" >
 			<div class="extra-container">
@@ -1035,3 +1050,7 @@ setInterval(function(){
 </script>
 </body>
 </html>
+
+
+
+
